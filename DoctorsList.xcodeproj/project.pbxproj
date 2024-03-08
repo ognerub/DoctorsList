@@ -10,10 +10,12 @@
 		0FD8637E172C2FF8AB2F1C9D /* Pods_DoctorsList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A16AA43E9714E240AE8DEF5 /* Pods_DoctorsList.framework */; };
 		842F27A12B9A5CBB00F66046 /* DoctorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F27A02B9A5CBB00F66046 /* DoctorView.swift */; };
 		842F27A32B9A5D4B00F66046 /* DoctorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F27A22B9A5D4B00F66046 /* DoctorViewModel.swift */; };
+		842F27A72B9B220400F66046 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F27A62B9B220400F66046 /* Doctor.swift */; };
+		842F27A92B9B236D00F66046 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F27A82B9B236D00F66046 /* ImageView.swift */; };
 		844DEC6E2B98C62400AA5327 /* DoctorsListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DEC6D2B98C62400AA5327 /* DoctorsListApp.swift */; };
 		844DEC722B98C62600AA5327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844DEC712B98C62600AA5327 /* Assets.xcassets */; };
 		844DEC752B98C62600AA5327 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844DEC742B98C62600AA5327 /* Preview Assets.xcassets */; };
-		844DEC7D2B98C68D00AA5327 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DEC7C2B98C68D00AA5327 /* Codable.swift */; };
+		844DEC7D2B98C68D00AA5327 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DEC7C2B98C68D00AA5327 /* ApiResponse.swift */; };
 		844DEC802B98C75600AA5327 /* DoctorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DEC7F2B98C75600AA5327 /* DoctorsViewModel.swift */; };
 		844DEC852B98C92400AA5327 /* DoctorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DEC842B98C92400AA5327 /* DoctorsView.swift */; };
 		844DEC872B999E2B00AA5327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DEC862B999E2B00AA5327 /* AppDelegate.swift */; };
@@ -26,11 +28,13 @@
 		54B122221175A9E3C1F190DB /* Pods-DoctorsList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorsList.release.xcconfig"; path = "Target Support Files/Pods-DoctorsList/Pods-DoctorsList.release.xcconfig"; sourceTree = "<group>"; };
 		842F27A02B9A5CBB00F66046 /* DoctorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorView.swift; sourceTree = "<group>"; };
 		842F27A22B9A5D4B00F66046 /* DoctorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorViewModel.swift; sourceTree = "<group>"; };
+		842F27A62B9B220400F66046 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
+		842F27A82B9B236D00F66046 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		844DEC6A2B98C62400AA5327 /* DoctorsList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoctorsList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844DEC6D2B98C62400AA5327 /* DoctorsListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsListApp.swift; sourceTree = "<group>"; };
 		844DEC712B98C62600AA5327 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		844DEC742B98C62600AA5327 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		844DEC7C2B98C68D00AA5327 /* Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
+		844DEC7C2B98C68D00AA5327 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		844DEC7F2B98C75600AA5327 /* DoctorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsViewModel.swift; sourceTree = "<group>"; };
 		844DEC842B98C92400AA5327 /* DoctorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsView.swift; sourceTree = "<group>"; };
 		844DEC862B999E2B00AA5327 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,7 +108,8 @@
 		844DEC7B2B98C66400AA5327 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				844DEC7C2B98C68D00AA5327 /* Codable.swift */,
+				844DEC7C2B98C68D00AA5327 /* ApiResponse.swift */,
+				842F27A62B9B220400F66046 /* Doctor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			children = (
 				844DEC842B98C92400AA5327 /* DoctorsView.swift */,
 				842F27A02B9A5CBB00F66046 /* DoctorView.swift */,
+				842F27A82B9B236D00F66046 /* ImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -264,8 +270,10 @@
 				844DECAC2B99D80300AA5327 /* DoctorServices.swift in Sources */,
 				844DEC852B98C92400AA5327 /* DoctorsView.swift in Sources */,
 				844DEC6E2B98C62400AA5327 /* DoctorsListApp.swift in Sources */,
-				844DEC7D2B98C68D00AA5327 /* Codable.swift in Sources */,
+				842F27A72B9B220400F66046 /* Doctor.swift in Sources */,
+				844DEC7D2B98C68D00AA5327 /* ApiResponse.swift in Sources */,
 				844DEC892B999F5F00AA5327 /* SceneDelagate.swift in Sources */,
+				842F27A92B9B236D00F66046 /* ImageView.swift in Sources */,
 				844DEC802B98C75600AA5327 /* DoctorsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

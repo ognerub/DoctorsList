@@ -29,7 +29,8 @@ final class DoctorsViewModel: ObservableObject {
                 responses.record.data.users.enumerated().forEach({ (index,user) in
                     let doctor = Doctor(
                         id: index,
-                        name: user.firstName)
+                        name: user.firstName,
+                        img: user.avatar)
                     doctors.append(doctor)
                 })
                 self.doctors = doctors

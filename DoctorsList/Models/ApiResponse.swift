@@ -7,33 +7,9 @@
 
 import Foundation
 
-struct Doctor: Codable, Identifiable {
-    let id: Int
-    let name: String
-    
-    enum CodingKeys: String, CodingKey {
-        case id
-        case name
-    }
-}
-
-// MARK: - Welcome
-struct Welcome: Codable {
+struct ApiResponse: Codable {
     let record: Record
     let metadata: Metadata
-}
-
-// MARK: - Metadata
-struct Metadata: Codable {
-    let id: String
-    let metadataPrivate: Bool
-    let createdAt, name: String
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case metadataPrivate = "private"
-        case createdAt, name
-    }
 }
 
 // MARK: - Record
@@ -45,12 +21,10 @@ struct Record: Codable {
     let data: DataClass
 }
 
-// MARK: - DataClass
 struct DataClass: Codable {
     let users: [User]
 }
 
-// MARK: - User
 struct User: Codable {
     let id, slug, firstName, patronymic: String
     let lastName, gender: String
@@ -106,7 +80,6 @@ struct User: Codable {
     }
 }
 
-// MARK: - AdvancedTraining
 struct AdvancedTraining: Codable {
     let id: Int
     let organization, position: String
@@ -129,13 +102,11 @@ enum CategoryLabel: String, Codable {
     case первая = "первая"
 }
 
-// MARK: - EducationTypeLabel
 struct EducationTypeLabel: Codable {
     let id: Int
     let name: String
 }
 
-// MARK: - FreeReceptionTime
 struct FreeReceptionTime: Codable {
     let time: Int
 }
@@ -145,7 +116,6 @@ enum GenderLabel: String, Codable {
     case мужчина = "Мужчина"
 }
 
-// MARK: - HigherEducation
 struct HigherEducation: Codable {
     let id: Int
     let university, specialization, qualification: String
@@ -161,7 +131,6 @@ struct HigherEducation: Codable {
     }
 }
 
-// MARK: - Rating
 struct Rating: Codable {
     let id: Int
     let name: Name
@@ -182,7 +151,6 @@ enum ScientificDegreeLabel: String, Codable {
     case нет = "нет"
 }
 
-// MARK: - Specialization
 struct Specialization: Codable {
     let id: Int
     let name: String
@@ -194,7 +162,6 @@ struct Specialization: Codable {
     }
 }
 
-// MARK: - WorkExpirience
 struct WorkExpirience: Codable {
     let id: Int
     let organization, position: String
@@ -211,8 +178,20 @@ struct WorkExpirience: Codable {
     }
 }
 
-// MARK: - Encode/decode helpers
+// MARK: - Metadata
+struct Metadata: Codable {
+    let id: String
+    let metadataPrivate: Bool
+    let createdAt, name: String
 
+    enum CodingKeys: String, CodingKey {
+        case id
+        case metadataPrivate = "private"
+        case createdAt, name
+    }
+}
+
+// MARK: - Encode/decode helpers
 class JSONNull: Codable, Hashable {
 
     public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {

@@ -15,6 +15,7 @@ struct DoctorView: View {
     var body: some View {
         HStack {
             Text(viewModel.doctor?.name ?? "Noname")
+            Image(url: viewModel.doctor?.img)
         }.onAppear {
             self.viewModel.getDoctor(id: id ?? 0)
         }

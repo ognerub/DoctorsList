@@ -21,11 +21,13 @@ class DoctorViewModel: ObservableObject {
                 return error
             })
             .sink(receiveCompletion: { _ in }, receiveValue: { responses in
-                let doctorById = responses.record.data.users[id]
-                let name = doctorById.firstName
+                let user = responses.record.data.users[id]
+                let name = user.firstName
+                let img = user.avatar
                     let doctor = Doctor(
                         id: id,
-                        name: name)
+                        name: name,
+                        img: img)
                     self.doctor = doctor
                 
             })

@@ -8,5 +8,6 @@ target 'DoctorsList' do
   # Pods for DoctorsList
 
 pod 'Alamofire', '~> 5.2'
+pod 'URLImage'
 
 end

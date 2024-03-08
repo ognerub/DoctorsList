@@ -11,26 +11,29 @@ import Combine
 class DoctorViewModel: ObservableObject {
     
     @Published var doctor: Doctor?
-    let service = DoctorsService()
+    private let service = DoctorsService()
     private var cancellation: AnyCancellable?
     
-    func getDoctor(id: Int) {
-        cancellation = service.get(id: id)
+    func getDoctor(id: UUID?) {
+        cancellation = service.fetch()
             .mapError({ (error) -> Error in
                 print(error)
                 return error
             })
             .sink(receiveCompletion: { _ in }, receiveValue: { responses in
-                let user = responses.record.data.users[id]
+                let users = responses.record.data.users.filter( {
+                    UUID(uuidString: $0.id) == id
+                })
+                guard let user = users.first else { return }
+                guard let id = UUID(uuidString: user.id) else { return }
                 let name = user.firstName
                 let img = user.avatar
-                    let doctor = Doctor(
-                        id: id,
-                        name: name,
-                        img: img)
-                    self.doctor = doctor
+                let doctor = Doctor(
+                    id: id,
+                    name: name,
+                    img: img)
+                self.doctor = doctor
                 
             })
-        
     }
 }

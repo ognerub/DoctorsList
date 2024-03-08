@@ -17,10 +17,5 @@ final class DoctorsService {
         let publisher = AF.request(url).publishDecodable(type: ApiResponse.self)
         return publisher.value()
     }
-    
-    func get(id: Int) -> AnyPublisher<ApiResponse, AFError> {
-        let publisher = AF.request(url).publishDecodable(type: ApiResponse.self)
-        return publisher.value()
-    }
 }
 

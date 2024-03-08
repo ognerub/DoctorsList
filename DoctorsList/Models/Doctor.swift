@@ -8,7 +8,7 @@
 import Foundation
 
 struct Doctor: Identifiable {
-    let id: Int
+    let id: UUID
     let name: String
     let img: String?
 }

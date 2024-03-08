@@ -27,8 +27,9 @@ final class DoctorsViewModel: ObservableObject {
             .sink(receiveCompletion: { _ in }, receiveValue: { responses in
                 var doctors: [Doctor] = []
                 responses.record.data.users.enumerated().forEach({ (index,user) in
+                    guard let id = UUID(uuidString: user.id) else { return }
                     let doctor = Doctor(
-                        id: index,
+                        id: id,
                         name: user.firstName,
                         img: user.avatar)
                     doctors.append(doctor)

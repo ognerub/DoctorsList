@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DoctorView: View {
-    var id: Int?
+    var id: UUID?
     
     @ObservedObject var viewModel = DoctorViewModel()
     
@@ -17,7 +17,7 @@ struct DoctorView: View {
             Text(viewModel.doctor?.name ?? "Noname")
             Image(url: viewModel.doctor?.img)
         }.onAppear {
-            self.viewModel.getDoctor(id: id ?? 0)
+            self.viewModel.getDoctor(id: id)
         }
     }
 }

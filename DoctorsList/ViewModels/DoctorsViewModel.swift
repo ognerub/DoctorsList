@@ -31,6 +31,8 @@ final class DoctorsViewModel: ObservableObject {
                     let doctor = Doctor(
                         id: id,
                         name: user.firstName,
+                        patronymic: user.patronymic,
+                        lastName: user.lastName,
                         img: user.avatar)
                     doctors.append(doctor)
                 })

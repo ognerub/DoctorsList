@@ -11,7 +11,8 @@
 		842F27A12B9A5CBB00F66046 /* DoctorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F27A02B9A5CBB00F66046 /* DoctorView.swift */; };
 		842F27A32B9A5D4B00F66046 /* DoctorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F27A22B9A5D4B00F66046 /* DoctorViewModel.swift */; };
 		842F27A72B9B220400F66046 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F27A62B9B220400F66046 /* Doctor.swift */; };
-		842F27A92B9B236D00F66046 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F27A82B9B236D00F66046 /* ImageView.swift */; };
+		842F27A92B9B236D00F66046 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F27A82B9B236D00F66046 /* URLImage.swift */; };
+		842F27AB2B9B32CE00F66046 /* DoctorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F27AA2B9B32CE00F66046 /* DoctorRow.swift */; };
 		844DEC6E2B98C62400AA5327 /* DoctorsListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844DEC6D2B98C62400AA5327 /* DoctorsListApp.swift */; };
 		844DEC722B98C62600AA5327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844DEC712B98C62600AA5327 /* Assets.xcassets */; };
 		844DEC752B98C62600AA5327 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844DEC742B98C62600AA5327 /* Preview Assets.xcassets */; };
@@ -29,7 +30,8 @@
 		842F27A02B9A5CBB00F66046 /* DoctorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorView.swift; sourceTree = "<group>"; };
 		842F27A22B9A5D4B00F66046 /* DoctorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorViewModel.swift; sourceTree = "<group>"; };
 		842F27A62B9B220400F66046 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
-		842F27A82B9B236D00F66046 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		842F27A82B9B236D00F66046 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		842F27AA2B9B32CE00F66046 /* DoctorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorRow.swift; sourceTree = "<group>"; };
 		844DEC6A2B98C62400AA5327 /* DoctorsList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoctorsList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844DEC6D2B98C62400AA5327 /* DoctorsListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsListApp.swift; sourceTree = "<group>"; };
 		844DEC712B98C62600AA5327 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,7 +130,8 @@
 			children = (
 				844DEC842B98C92400AA5327 /* DoctorsView.swift */,
 				842F27A02B9A5CBB00F66046 /* DoctorView.swift */,
-				842F27A82B9B236D00F66046 /* ImageView.swift */,
+				842F27AA2B9B32CE00F66046 /* DoctorRow.swift */,
+				842F27A82B9B236D00F66046 /* URLImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				844DEC872B999E2B00AA5327 /* AppDelegate.swift in Sources */,
+				842F27AB2B9B32CE00F66046 /* DoctorRow.swift in Sources */,
 				842F27A32B9A5D4B00F66046 /* DoctorViewModel.swift in Sources */,
 				842F27A12B9A5CBB00F66046 /* DoctorView.swift in Sources */,
 				844DECAC2B99D80300AA5327 /* DoctorServices.swift in Sources */,
@@ -273,7 +277,7 @@
 				842F27A72B9B220400F66046 /* Doctor.swift in Sources */,
 				844DEC7D2B98C68D00AA5327 /* ApiResponse.swift in Sources */,
 				844DEC892B999F5F00AA5327 /* SceneDelagate.swift in Sources */,
-				842F27A92B9B236D00F66046 /* ImageView.swift in Sources */,
+				842F27A92B9B236D00F66046 /* URLImage.swift in Sources */,
 				844DEC802B98C75600AA5327 /* DoctorsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

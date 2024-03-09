@@ -10,5 +10,7 @@ import Foundation
 struct Doctor: Identifiable {
     let id: UUID
     let name: String
+    let patronymic: String
+    let lastName: String
     let img: String?
 }

@@ -31,6 +31,8 @@ class DoctorViewModel: ObservableObject {
                 let doctor = Doctor(
                     id: id,
                     name: name,
+                    patronymic: user.patronymic,
+                    lastName: user.lastName,
                     img: img)
                 self.doctor = doctor
                 

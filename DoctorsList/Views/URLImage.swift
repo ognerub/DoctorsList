@@ -8,7 +8,7 @@
 import SwiftUI
 import URLImage
 
-struct Image: View {
+struct URLImageView: View {
     var url: String?
     
     var body: some View {

@@ -16,16 +16,23 @@ struct DoctorsView: View {
     var body: some View {
         NavigationView {
             List(viewModel.doctors) { doctor in
-                HStack {
-                    VStack(alignment: .leading) {
-                        NavigationLink(destination: DoctorView(id: doctor.id)) {
-                            Text(doctor.name)
-                        }
-                    }
-                }
+                DoctorRow(
+                    doctor: doctor,
+                    buttonTitle: "Записаться",
+                    buttonColor: Color("pinkColor"),
+                    url: doctor.img ?? ""
+                )
+                .background(
+                    NavigationLink("", destination: DoctorView(id: doctor.id))
+                        .opacity(0)
+                )
+                .listRowBackground(Color.clear)
+                .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
+                
             }
+            .background(Color("lightGreyColor"))
+            .scrollContentBackground(.hidden)
         }
-        .navigationBarTitle("Navigation", displayMode: .inline)
     }
 }
 

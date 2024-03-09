@@ -26,14 +26,12 @@ struct DataClass: Codable {
 }
 
 struct User: Codable {
-    let id, slug, firstName, patronymic: String
-    let lastName, gender: String
+    let id, slug, firstName, patronymic, lastName, gender: String
     let genderLabel: GenderLabel
     let specialization: [Specialization]
     let ratings: [Rating]
     let ratingsRating: Double
-    let seniority, textChatPrice, videoChatPrice, homePrice: Int
-    let hospitalPrice: Int
+    let seniority, textChatPrice, videoChatPrice, homePrice, hospitalPrice: Int
     let avatar: String?
     let nearestReceptionTime: Int?
     let freeReceptionTime: [FreeReceptionTime]

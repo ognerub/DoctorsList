@@ -18,7 +18,7 @@ final class SceneDelegate: NSObject, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         let contentView = DoctorsView()
-        
+        window.backgroundColor = .brown
         window.rootViewController = UIHostingController(rootView: contentView)
         window.makeKeyAndVisible()
         

@@ -14,11 +14,9 @@ final class SceneDelegate: NSObject, UIWindowSceneDelegate {
         guard let windowScene = scene as? UIWindowScene else {
             return
         }
-        print("SceneDelegate connected")
         let window = UIWindow(windowScene: windowScene)
         
         let contentView = DoctorsView()
-        window.backgroundColor = .brown
         window.rootViewController = UIHostingController(rootView: contentView)
         window.makeKeyAndVisible()
         

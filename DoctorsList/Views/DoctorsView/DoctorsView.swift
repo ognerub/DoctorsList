@@ -13,17 +13,23 @@ struct DoctorsView: View {
     
     @ObservedObject var viewModel = DoctorsViewModel()
     
+    init() {
+        UINavigationBar.appearance().titleTextAttributes = [
+            .font: UIFont.systemFont(ofSize: 20, weight: .regular),
+            .foregroundColor: UIColor.black
+        ]
+    }
+    
     var body: some View {
         NavigationView {
             List(viewModel.doctors) { doctor in
-                DoctorRow(
+                DoctorRowView(
                     doctor: doctor,
                     buttonTitle: "Записаться",
-                    buttonColor: Color("pinkColor"),
-                    url: doctor.img ?? ""
+                    buttonColor: Color("pinkColor")
                 )
                 .background(
-                    NavigationLink("", destination: DoctorView(id: doctor.id))
+                    NavigationLink("", destination: SingleDoctorView(doctor: doctor))
                         .opacity(0)
                 )
                 .listRowBackground(Color.clear)

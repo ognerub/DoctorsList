@@ -13,4 +13,9 @@ struct Doctor: Identifiable {
     let patronymic: String
     let lastName: String
     let img: String?
+    let rating: Double
+    let specialization: String
+    let workExpirience: String
+    let price: String
+    let education: String
 }

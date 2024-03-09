@@ -8,7 +8,7 @@
 
 Планы по доработке: нет.
 
-Стек: #SwiftUI, #Combine, #Alamofire, #URLImage, #CocoaPods
+Стек: #SwiftUI, #MVVM, #Combine, #Alamofire, #URLImage, #CocoaPods
 
 [Дизайн в Figma](https://www.figma.com/file/Kwic8nnnhxLYztOswqQWix/Test?type=design&node-id=4-19732&mode=design&t=DWjwU9bLkUKGnM6F-0)
 [Скринкаст](https://drive.google.com/file/d/1NvF4Zx9mg-TKEVt9ANAA_hZYkOffC48j/view?usp=sharing)

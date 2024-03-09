@@ -14,7 +14,7 @@ struct StandartButtonView: View {
     
     var body: some View {
         Text(title)
-            .font(.title2)
+            .font(.headline)
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 47)
             .padding(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
             .background(backgroundColor)
